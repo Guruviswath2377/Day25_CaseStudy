@@ -15,7 +15,7 @@ export default function AdminDashboard() {
       setTurfs(turfs.filter(t => t.id !== id));
     });
   }
-  // Edit/Add forms are shown in EditTurf.jsx, here just Show/Delete
+
   return (
     <>
       <AdminNavbar />
@@ -24,7 +24,7 @@ export default function AdminDashboard() {
         {turfs.map(turf => (
           <TurfCard key={turf.id} turf={turf} isAdmin onDelete={handleDelete} onEdit={() => {}} />
         ))}
-        {/* Link/button to add new turf or edit turf */}
+
       </div>
     </>
   );
